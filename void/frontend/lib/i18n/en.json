@@ -1,0 +1,115 @@
+{
+  "appName": "VOID",
+  "tagline": "Synthetic Reality Generator",
+  "nav": {
+    "dashboard": "Dashboard",
+    "worlds": "Worlds",
+    "entities": "Entities",
+    "scenarios": "Scenarios",
+    "simulations": "Simulations",
+    "workers": "Workers",
+    "metrics": "Metrics",
+    "events": "Events",
+    "settings": "Settings"
+  },
+  "dashboard": {
+    "title": "Control Center",
+    "subtitle": "Live overview of every world, simulation and worker in your synthetic reality.",
+    "activeWorlds": "Active Worlds",
+    "runningSimulations": "Running Simulations",
+    "totalEntities": "Total Entities",
+    "eventsPerSecond": "Events / sec",
+    "tickRate": "Tick Rate",
+    "healthyWorkers": "Healthy Workers"
+  },
+  "worlds": {
+    "title": "Worlds",
+    "create": "Create World",
+    "name": "Name",
+    "type": "Type",
+    "size": "Size",
+    "seed": "Seed",
+    "regions": "Regions",
+    "createdAt": "Created"
+  },
+  "simulations": {
+    "title": "Simulations",
+    "create": "New Simulation",
+    "start": "Start",
+    "pause": "Pause",
+    "resume": "Resume",
+    "stop": "Stop",
+    "step": "Step",
+    "status": "Status",
+    "tick": "Tick",
+    "entityCount": "Entities"
+  },
+  "entities": {
+    "title": "Entity Inspector",
+    "search": "Search entities…",
+    "archetype": "Archetype",
+    "attributes": "Attributes",
+    "goals": "Goals",
+    "relationships": "Relationships",
+    "memory": "Recent Memory"
+  },
+  "scenarios": {
+    "title": "Scenario Builder",
+    "inject": "Inject",
+    "category": "Category",
+    "templates": "Template Library"
+  },
+  "workers": {
+    "title": "Distributed Workers",
+    "health": "Health",
+    "partition": "Assigned Partition",
+    "lastHeartbeat": "Last Heartbeat"
+  },
+  "metrics": {
+    "title": "Telemetry & Metrics",
+    "heap": "Heap Alloc (MB)",
+    "goroutines": "Goroutines",
+    "uptime": "Uptime"
+  },
+  "events": {
+    "title": "Event Explorer",
+    "type": "Type",
+    "source": "Source",
+    "target": "Target",
+    "severity": "Severity",
+    "tick": "Tick"
+  },
+  "settings": {
+    "title": "Settings",
+    "appearance": "Appearance",
+    "theme": "Theme",
+    "language": "Language",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeWindows": "Windows Default",
+    "themeRed": "Red",
+    "themeBlue": "Blue",
+    "operatingHours": "Operating Hours",
+    "operatingHoursDesc": "Define exactly when VOID is considered \"open\" for scheduled runs. Nothing here is preset — add the days and times that match your own schedule.",
+    "timezone": "Timezone",
+    "addWindow": "Add Window",
+    "weekday": "Day",
+    "startTime": "Start Time",
+    "endTime": "End Time",
+    "remove": "Remove",
+    "save": "Save",
+    "statusOpen": "Open now",
+    "statusClosed": "Closed now",
+    "nextTransitionOpen": "Closes in",
+    "nextTransitionClosed": "Opens in",
+    "apiBase": "API Base URL"
+  },
+  "weekdays": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+  "common": {
+    "loading": "Loading…",
+    "noData": "No data yet.",
+    "save": "Save",
+    "cancel": "Cancel",
+    "refresh": "Refresh"
+  }
+}

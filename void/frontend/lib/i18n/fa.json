@@ -1,0 +1,115 @@
+{
+  "appName": "وید",
+  "tagline": "مولد واقعیت مصنوعی",
+  "nav": {
+    "dashboard": "داشبورد",
+    "worlds": "جهان‌ها",
+    "entities": "موجودیت‌ها",
+    "scenarios": "سناریوها",
+    "simulations": "شبیه‌سازی‌ها",
+    "workers": "ورکرها",
+    "metrics": "متریک‌ها",
+    "events": "رویدادها",
+    "settings": "تنظیمات"
+  },
+  "dashboard": {
+    "title": "مرکز کنترل",
+    "subtitle": "نمای زنده از تمام جهان‌ها، شبیه‌سازی‌ها و ورکرهای واقعیت مصنوعی شما.",
+    "activeWorlds": "جهان‌های فعال",
+    "runningSimulations": "شبیه‌سازی‌های در حال اجرا",
+    "totalEntities": "تعداد کل موجودیت‌ها",
+    "eventsPerSecond": "رویداد بر ثانیه",
+    "tickRate": "نرخ تیک",
+    "healthyWorkers": "ورکرهای سالم"
+  },
+  "worlds": {
+    "title": "جهان‌ها",
+    "create": "ساخت جهان",
+    "name": "نام",
+    "type": "نوع",
+    "size": "اندازه",
+    "seed": "سید",
+    "regions": "مناطق",
+    "createdAt": "تاریخ ایجاد"
+  },
+  "simulations": {
+    "title": "شبیه‌سازی‌ها",
+    "create": "شبیه‌سازی جدید",
+    "start": "شروع",
+    "pause": "توقف موقت",
+    "resume": "ادامه",
+    "stop": "توقف",
+    "step": "یک گام",
+    "status": "وضعیت",
+    "tick": "تیک",
+    "entityCount": "تعداد موجودیت"
+  },
+  "entities": {
+    "title": "بازرس موجودیت",
+    "search": "جستجوی موجودیت…",
+    "archetype": "کهن‌الگو",
+    "attributes": "ویژگی‌ها",
+    "goals": "اهداف",
+    "relationships": "روابط",
+    "memory": "حافظه اخیر"
+  },
+  "scenarios": {
+    "title": "سازنده سناریو",
+    "inject": "اعمال",
+    "category": "دسته‌بندی",
+    "templates": "کتابخانه قالب‌ها"
+  },
+  "workers": {
+    "title": "ورکرهای توزیع‌شده",
+    "health": "سلامت",
+    "partition": "پارتیشن تخصیص‌یافته",
+    "lastHeartbeat": "آخرین ضربان"
+  },
+  "metrics": {
+    "title": "تله‌متری و متریک‌ها",
+    "heap": "حافظه Heap (مگابایت)",
+    "goroutines": "گوروتین‌ها",
+    "uptime": "زمان فعالیت"
+  },
+  "events": {
+    "title": "کاوشگر رویداد",
+    "type": "نوع",
+    "source": "منبع",
+    "target": "هدف",
+    "severity": "شدت",
+    "tick": "تیک"
+  },
+  "settings": {
+    "title": "تنظیمات",
+    "appearance": "ظاهر",
+    "theme": "پوسته",
+    "language": "زبان",
+    "themeLight": "روشن",
+    "themeDark": "تیره",
+    "themeWindows": "پیش‌فرض ویندوز",
+    "themeRed": "قرمز",
+    "themeBlue": "آبی",
+    "operatingHours": "ساعات کاری",
+    "operatingHoursDesc": "دقیقاً مشخص کنید سیستم چه زمانی «باز» در نظر گرفته شود. هیچ مقدار پیش‌فرضی وجود ندارد؛ روزها و ساعت‌های موردنظر خودتان را اضافه کنید.",
+    "timezone": "منطقه زمانی",
+    "addWindow": "افزودن بازه",
+    "weekday": "روز",
+    "startTime": "زمان شروع",
+    "endTime": "زمان پایان",
+    "remove": "حذف",
+    "save": "ذخیره",
+    "statusOpen": "درحال حاضر باز",
+    "statusClosed": "درحال حاضر بسته",
+    "nextTransitionOpen": "زمان تا بسته شدن",
+    "nextTransitionClosed": "زمان تا باز شدن",
+    "apiBase": "آدرس پایه API"
+  },
+  "weekdays": ["یکشنبه", "دوشنبه", "سه‌شنبه", "چهارشنبه", "پنجشنبه", "جمعه", "شنبه"],
+  "common": {
+    "loading": "در حال بارگذاری…",
+    "noData": "داده‌ای موجود نیست.",
+    "save": "ذخیره",
+    "cancel": "انصراف",
+    "refresh": "بروزرسانی"
+  }
+}

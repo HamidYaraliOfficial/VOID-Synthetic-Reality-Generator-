@@ -1,0 +1,115 @@
+{
+  "appName": "VOID",
+  "tagline": "合成现实生成器",
+  "nav": {
+    "dashboard": "仪表盘",
+    "worlds": "世界",
+    "entities": "实体",
+    "scenarios": "场景",
+    "simulations": "模拟",
+    "workers": "工作节点",
+    "metrics": "指标",
+    "events": "事件",
+    "settings": "设置"
+  },
+  "dashboard": {
+    "title": "控制中心",
+    "subtitle": "实时查看您的合成现实中所有世界、模拟和工作节点。",
+    "activeWorlds": "活跃世界",
+    "runningSimulations": "运行中的模拟",
+    "totalEntities": "实体总数",
+    "eventsPerSecond": "每秒事件数",
+    "tickRate": "刻速率",
+    "healthyWorkers": "健康工作节点"
+  },
+  "worlds": {
+    "title": "世界",
+    "create": "创建世界",
+    "name": "名称",
+    "type": "类型",
+    "size": "规模",
+    "seed": "种子",
+    "regions": "区域",
+    "createdAt": "创建时间"
+  },
+  "simulations": {
+    "title": "模拟",
+    "create": "新建模拟",
+    "start": "开始",
+    "pause": "暂停",
+    "resume": "继续",
+    "stop": "停止",
+    "step": "单步",
+    "status": "状态",
+    "tick": "刻",
+    "entityCount": "实体数量"
+  },
+  "entities": {
+    "title": "实体检查器",
+    "search": "搜索实体…",
+    "archetype": "原型",
+    "attributes": "属性",
+    "goals": "目标",
+    "relationships": "关系",
+    "memory": "近期记忆"
+  },
+  "scenarios": {
+    "title": "场景构建器",
+    "inject": "注入",
+    "category": "分类",
+    "templates": "模板库"
+  },
+  "workers": {
+    "title": "分布式工作节点",
+    "health": "健康状态",
+    "partition": "分配的分区",
+    "lastHeartbeat": "最近心跳"
+  },
+  "metrics": {
+    "title": "遥测与指标",
+    "heap": "堆内存 (MB)",
+    "goroutines": "协程数",
+    "uptime": "运行时长"
+  },
+  "events": {
+    "title": "事件浏览器",
+    "type": "类型",
+    "source": "来源",
+    "target": "目标",
+    "severity": "严重程度",
+    "tick": "刻"
+  },
+  "settings": {
+    "title": "设置",
+    "appearance": "外观",
+    "theme": "主题",
+    "language": "语言",
+    "themeLight": "浅色",
+    "themeDark": "深色",
+    "themeWindows": "Windows 默认",
+    "themeRed": "红色",
+    "themeBlue": "蓝色",
+    "operatingHours": "运营时间",
+    "operatingHoursDesc": "精确设置系统何时被视为“开放”。此处没有任何预设值——请添加符合您自己安排的日期与时间。",
+    "timezone": "时区",
+    "addWindow": "添加时间段",
+    "weekday": "星期",
+    "startTime": "开始时间",
+    "endTime": "结束时间",
+    "remove": "删除",
+    "save": "保存",
+    "statusOpen": "当前开放",
+    "statusClosed": "当前关闭",
+    "nextTransitionOpen": "距关闭还有",
+    "nextTransitionClosed": "距开放还有",
+    "apiBase": "API 基础地址"
+  },
+  "weekdays": ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
+  "common": {
+    "loading": "加载中…",
+    "noData": "暂无数据。",
+    "save": "保存",
+    "cancel": "取消",
+    "refresh": "刷新"
+  }
+}

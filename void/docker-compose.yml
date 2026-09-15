@@ -1,0 +1,80 @@
+version: "3.9"
+
+# VOID — full local stack: API/simulation core, dashboard, and the
+# infrastructure the storage layer is designed to plug into (Postgres,
+# Redis, NATS). The bundled Go binary runs perfectly well without any of
+# these (falling back to in-memory/file storage) — wire in real DSNs via
+# the VOID_POSTGRES_DSN / VOID_REDIS_ADDR / VOID_NATS_URL env vars once you
+# want durability across restarts.
+
+services:
+  void-api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: void-api:local
+    container_name: void-api
+    ports:
+      - "8080:8080"
+    environment:
+      VOID_ENV: production
+      VOID_HTTP_ADDR: ":8080"
+      VOID_DATA_DIR: /app/data
+      VOID_WORKER_COUNT: "8"
+      VOID_CORS_ORIGIN: "http://localhost:3000"
+      VOID_JWT_SECRET: ${VOID_JWT_SECRET:-change-me-in-production}
+      VOID_POSTGRES_DSN: ${VOID_POSTGRES_DSN:-}
+      VOID_REDIS_ADDR: ${VOID_REDIS_ADDR:-}
+      VOID_NATS_URL: ${VOID_NATS_URL:-}
+    volumes:
+      - void-data:/app/data
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8080/healthz"]
+      interval: 15s
+      timeout: 3s
+      retries: 3
+    restart: unless-stopped
+
+  void-dashboard:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_BASE: http://localhost:8080
+    image: void-dashboard:local
+    container_name: void-dashboard
+    ports:
+      - "3000:3000"
+    depends_on:
+      - void-api
+    restart: unless-stopped
+
+  # Optional durable backends — disabled by default; uncomment and set the
+  # matching VOID_* env vars above to use them instead of the built-in
+  # in-memory/file providers.
+
+  # postgres:
+  #   image: postgres:16-alpine
+  #   environment:
+  #     POSTGRES_DB: void
+  #     POSTGRES_USER: void
+  #     POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-void}
+  #   volumes:
+  #     - void-postgres:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+
+  # redis:
+  #   image: redis:7-alpine
+  #   ports:
+  #     - "6379:6379"
+
+  # nats:
+  #   image: nats:2-alpine
+  #   command: ["-js"]
+  #   ports:
+  #     - "4222:4222"
+
+volumes:
+  void-data:
+  # void-postgres:

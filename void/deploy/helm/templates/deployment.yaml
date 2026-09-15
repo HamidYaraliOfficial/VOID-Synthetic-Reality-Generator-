@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: void-api
+  labels: { app: void-api }
+spec:
+  replicas: {{ .Values.api.replicaCount }}
+  selector:
+    matchLabels: { app: void-api }
+  template:
+    metadata:
+      labels: { app: void-api }
+    spec:
+      containers:
+        - name: void-api
+          image: {{ .Values.api.image }}
+          ports:
+            - containerPort: {{ .Values.api.port }}
+          envFrom:
+            - secretRef: { name: void-secrets }
+          env:
+            {{- range $k, $v := .Values.api.env }}
+            - name: {{ $k }}
+              value: {{ $v | quote }}
+            {{- end }}
+          readinessProbe:
+            httpGet: { path: /readyz, port: {{ .Values.api.port }} }
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet: { path: /healthz, port: {{ .Values.api.port }} }
+            initialDelaySeconds: 10
+            periodSeconds: 15
+          resources: {{ toYaml .Values.api.resources | nindent 12 }}
+      terminationGracePeriodSeconds: 30
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: void-dashboard
+  labels: { app: void-dashboard }
+spec:
+  replicas: {{ .Values.dashboard.replicaCount }}
+  selector:
+    matchLabels: { app: void-dashboard }
+  template:
+    metadata:
+      labels: { app: void-dashboard }
+    spec:
+      containers:
+        - name: void-dashboard
+          image: {{ .Values.dashboard.image }}
+          ports:
+            - containerPort: {{ .Values.dashboard.port }}
+          resources: {{ toYaml .Values.dashboard.resources | nindent 12 }}
+      terminationGracePeriodSeconds: 15

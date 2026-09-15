@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------------
+   VOID design tokens — Windows 11 Fluent-inspired themes.
+   Every theme defines the same variable set so components never branch
+   on theme name; switching themes is just swapping the [data-theme] value
+   on <html>.
+--------------------------------------------------------------------- */
+
+:root,
+[data-theme='light'] {
+  --canvas: #f3f3f3;
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-2: #ffffff;
+  --surface-3: #fafafa;
+  --border: rgba(0, 0, 0, 0.08);
+  --fg: #1b1b1b;
+  --fg-muted: #5f5f5f;
+  --accent: #0067c0;
+  --accent-hover: #005ba1;
+  --success: #0f7b0f;
+  --warning: #9d5d00;
+  --danger: #c42b1c;
+}
+
+[data-theme='dark'] {
+  --canvas: #202020;
+  --surface: rgba(44, 44, 44, 0.72);
+  --surface-2: #2c2c2c;
+  --surface-3: #262626;
+  --border: rgba(255, 255, 255, 0.08);
+  --fg: #f3f3f3;
+  --fg-muted: #b0b0b0;
+  --accent: #60cdff;
+  --accent-hover: #7fd6ff;
+  --success: #6ccb5f;
+  --warning: #fce100;
+  --danger: #ff99a4;
+}
+
+/* Windows 11 "default" (Mica + blue accent, slightly cooler light theme) */
+[data-theme='windows'] {
+  --canvas: #e9eff6;
+  --surface: rgba(255, 255, 255, 0.78);
+  --surface-2: #ffffff;
+  --surface-3: #f4f8fc;
+  --border: rgba(0, 40, 90, 0.1);
+  --fg: #14181f;
+  --fg-muted: #57616f;
+  --accent: #0078d4;
+  --accent-hover: #106ebe;
+  --success: #107c10;
+  --warning: #8a6d00;
+  --danger: #d13438;
+}
+
+[data-theme='red'] {
+  --canvas: #231416;
+  --surface: rgba(58, 27, 30, 0.72);
+  --surface-2: #3a1b1e;
+  --surface-3: #331719;
+  --border: rgba(255, 255, 255, 0.08);
+  --fg: #fbeaec;
+  --fg-muted: #d8a7ac;
+  --accent: #ff5c6c;
+  --accent-hover: #ff7c8a;
+  --success: #6ccb5f;
+  --warning: #fce100;
+  --danger: #ff99a4;
+}
+
+[data-theme='blue'] {
+  --canvas: #0e1a2b;
+  --surface: rgba(20, 38, 61, 0.72);
+  --surface-2: #14263d;
+  --surface-3: #112036;
+  --border: rgba(255, 255, 255, 0.08);
+  --fg: #eaf3ff;
+  --fg-muted: #9db6d3;
+  --accent: #4cc2ff;
+  --accent-hover: #6fd0ff;
+  --success: #6ccb5f;
+  --warning: #fce100;
+  --danger: #ff99a4;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--canvas);
+  color: var(--fg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 8px;
+}
+
+.acrylic {
+  background: var(--surface);
+  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  border: 1px solid var(--border);
+}
+
+.void-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+[dir='rtl'] .flip-rtl {
+  transform: scaleX(-1);
+}
